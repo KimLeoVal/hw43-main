@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег FORM</title>
+ </head>
+ <body>
+
+ <form action="/" method="post">
+     {% csrf_token %}
+     <p>Enter first number:  <input type="number" name="number1"></p>
+     <p>Enter second number:  <input type="number" name="number2"></p>
+  <p><input type="radio" name="action" value="add">add<Br>
+  <input type="radio" name="action" value="subtract">subtract<Br>
+  <input type="radio" name="action" value="multiply">multiply<br>
+      <input type="radio" name="action" value="divide">divide
+  </p>
+  <p><input type="submit" value="Calculate"></p>
+ </form>
+<p><b>Result : {{ number1 }}{{ action }}{{ number2 }} {{ equals }} {{ resoult }}</b> </p>
+ </body>
+</html>
